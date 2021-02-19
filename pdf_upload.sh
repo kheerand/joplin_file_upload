@@ -1,7 +1,13 @@
 #!/bin/bash
 
-resource_url='http://localhost:41184/resources?token=1c8a32e6698985751466e787f64576c787321494dbdf53e463e752d27756012d6642dbead44bd191e63a7dac1536d03a2032c7d53c1ed1133dc3a4fcf0620377'
-note_url='http://localhost:41184/notes?token=1c8a32e6698985751466e787f64576c787321494dbdf53e463e752d27756012d6642dbead44bd191e63a7dac1536d03a2032c7d53c1ed1133dc3a4fcf0620377'
+script_dir=`dirname $0`
+my_token=`cat dirname $script_dir/my_token`
+echo $my_token
+
+resource_url="http://localhost:41184/resources?token=$my_token"
+note_url="http://localhost:41184/notes?token=$my_token"
+# resource_url='http://localhost:41184/resources?token=1c8a32e6698985751466e787f64576c787321494dbdf53e463e752d27756012d6642dbead44bd191e63a7dac1536d03a2032c7d53c1ed1133dc3a4fcf0620377'
+# note_url='http://localhost:41184/notes?token=1c8a32e6698985751466e787f64576c787321494dbdf53e463e752d27756012d6642dbead44bd191e63a7dac1536d03a2032c7d53c1ed1133dc3a4fcf0620377'
 
 path="$1"
 filename_pdf="$2"
