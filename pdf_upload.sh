@@ -50,7 +50,7 @@ echo "---Creating note with resource and text in Joplin"
 read -r -d '' payload << EOM
 {
     "title": "$filename_pdf",
-    "body": "[$filename_pdf](:/$resource_id)\n# File content\n `jq -Rs . "$filename_txt"|sed 's/"//g'`"
+    "body": "[$filename_pdf](:/$resource_id)\n# File content\n <!--\n`jq -Rs . "$filename_txt"|sed 's/"//g'` -->\n"
 }
 EOM
 
