@@ -17,6 +17,17 @@ echo "filename = $filename_txt"
 # Change working directory to $path
 cd "$path"
 
+# OCR the file with Sandwitch
+mv "$filename_pdf" "org_$filename_pdf"
+pdfsandwich "org_$filename_pdf" -o "$filename_pdf"
+if [ $? ]
+then
+    rm "org_$filename_pdf"
+else
+    mv "org_$filename_pdf" "$filename_pdf"
+    echo "OCR failed"
+fi
+
 # Extract the text from the PDF
 echo "---Exctracting text from PDF"
 pdf2txt.py "$filename_pdf" >"$filename_txt"
