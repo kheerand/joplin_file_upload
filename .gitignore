@@ -1,2 +1,4 @@
 my_token
 config-dev.yaml
+organize-config-dev.yaml
+dev_organize.sh
