@@ -10,7 +10,9 @@ TODO
 
 ## Dependencies
 
-TODO
+- [pdfsandwitch](http://www.tobias-elze.de/pdfsandwich/) - used for doing OCR recognition on scanned PDFs
+- [py2pdf](https://pypi.org/project/py2pdf/) - used to extract text from the PDF
+- [jq](https://stedolan.github.io/jq/) - for parsing text into json
 
 ## Usage
 

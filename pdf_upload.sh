@@ -19,7 +19,7 @@ cd "$path"
 
 # OCR the file with Sandwitch
 mv "$filename_pdf" "org_$filename_pdf"
-pdfsandwich "org_$filename_pdf" -o "$filename_pdf"
+pdfsandwich -rgb "org_$filename_pdf" -o "$filename_pdf"
 if [ $? ]
 then
     rm "org_$filename_pdf"
