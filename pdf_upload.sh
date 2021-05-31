@@ -2,10 +2,12 @@
 
 script_dir=`dirname $0`
 my_token=`cat dirname $script_dir/my_token`
+joplin_server=`cat $script_dir/joplin_server`
 echo $my_token
+echo $joplin_server
 
-resource_url="http://localhost:41184/resources?token=$my_token"
-note_url="http://localhost:41184/notes?token=$my_token"
+resource_url="http://$joplin_server/resources?token=$my_token"
+note_url="http://$joplin_server/notes?token=$my_token"
 
 path="$1"
 filename_pdf="$2"
