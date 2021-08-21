@@ -8,7 +8,7 @@ echo $joplin_server
 
 resource_url="http://$joplin_server/resources?token=$my_token"
 note_url="http://$joplin_server/notes?token=$my_token"
-parent_id="0ccee44dca614addabec442e839a0125"
+parent_id="cf44fa9724714c3db6a28a0172e04f54"
 
 path="$1"
 filename_pdf="$2"
