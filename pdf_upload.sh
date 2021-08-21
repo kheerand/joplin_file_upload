@@ -72,4 +72,6 @@ echo "$output"
 
 # Cleanup (delete files)
 echo "---Cleanup uploaded files"
-rm "$path/$filename_pdf" "$path/$filename_txt"
+# rm "$path/$filename_pdf" "$path/$filename_txt"
+rm "$path/$filename_txt"
+mv "$path/$filename_pdf" "$path/[done]_$filename_pdf"
