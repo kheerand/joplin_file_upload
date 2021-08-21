@@ -8,6 +8,7 @@ echo $joplin_server
 
 resource_url="http://$joplin_server/resources?token=$my_token"
 note_url="http://$joplin_server/notes?token=$my_token"
+parent_id="0ccee44dca614addabec442e839a0125"
 
 path="$1"
 filename_pdf="$2"
@@ -62,6 +63,7 @@ echo "---Creating note with resource and text in Joplin"
 read -r -d '' payload << EOM
 {
     "title": "$filename_pdf",
+    "parent_id": "$parent_id",
     "body": "[$filename_pdf](:/$resource_id)\n# File content\n <!--\n`cat "$filename_txt"` -->\n"
 }
 EOM
